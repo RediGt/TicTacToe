@@ -117,7 +117,7 @@ namespace TicTacToe
                 Button2_0.Background = Button1_1.Background = Button0_2.Background = Brushes.Green;
             }
 
-            if (!results.Any(res => res == MarkType.Free))
+            if (!results.Any(res => res == MarkType.Free) && !gameEnded)
             {
                 gameEnded = true;
                 Container.Children.Cast<Button>().ToList().ForEach(button =>
